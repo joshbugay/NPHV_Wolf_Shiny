@@ -1,11 +1,11 @@
 ## Joshua Bugay
 ## July 16th, 2025
 ## Global variables and functions
-## 
 
 # Load required libraries
 library(shiny)
 library(tidyverse)
+library(magrittr)
 library(httr)
 library(jsonlite)
 
@@ -15,5 +15,7 @@ source("R/plot_functions.R")
 source("R/utils.R")
 
 # Global variables
-GITHUB_REPO_URL <- "https://api.github.com/repos/username/repo/contents/data.csv"
 CACHE_DURATION <- 3600  # Cache for 1 hour
+GITHUB_URLS <- list(
+ Camera_locations = "https://raw.githubusercontent.com/joshbugay/NPHV_Wolf_Shiny/refs/heads/main/data/Camera_locations.csv",
+ Wolf_observations = "https://raw.githubusercontent.com/joshbugay/NPHV_Wolf_Shiny/refs/heads/main/data/Wolf_observations.csv")
